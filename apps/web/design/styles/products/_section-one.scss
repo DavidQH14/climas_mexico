@@ -1,0 +1,43 @@
+.section-one {
+    padding-top: 90px;
+    position: relative;
+
+    .image-wrapper {
+        padding: 0 50px;
+    }
+
+    .text-wrapper {
+        font-family: 'RobotoCondensed-Regular';
+        font-size: 18px;
+        margin-top: 50px;
+
+        strong {
+            font-family: 'Roboto-Medium';
+        }
+    }
+}
+
+@media (min-width: 768px) {
+
+    .section-one {
+
+        .flex-content {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .image-wrapper {
+            max-width: 36.7%;
+            padding: unset;
+            width: 100%;
+        }
+
+        .text-wrapper {
+            font-size: 20px;
+            margin-top: unset;
+            max-width: 55.6%;
+            width: 100%;
+        }
+    }
+}

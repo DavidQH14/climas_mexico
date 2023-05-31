@@ -1,0 +1,125 @@
+.block.how-it-works {
+    position: relative;
+
+    .text-wrapper {
+        max-width: 414px;
+        padding: 50px 25px;
+    }
+
+    .title {
+        font-family: 'Signika';
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .steps {
+        padding-top: 10px;
+    }
+
+    .item {
+        margin-top: 30px;
+        padding-left: 40px;
+        position: relative;
+    }
+
+    .item-number {
+        align-items: center;
+        background: #313F52;
+        border-radius: 50%;
+        color: #FFFFFF;
+        display: flex;
+        font-family: 'Signika';
+        font-size: 25px;
+        height: 30px;
+        justify-content: center;
+        left: 0;
+        line-height: 31px;
+        position: absolute;
+        top: 0;
+        width: 30px;
+    }
+
+    .item-title {
+        color: #000000;
+        font-family: 'Signika';
+        font-size: 18px;
+    }
+
+    .item-desc {
+        color: #717171;
+        font-family: 'RobotoCondensed-Regular';
+        font-size: 16px;
+        line-height: 19px;
+        margin-top: 10px;
+    }
+
+    a.see-more {
+        align-items: center;
+        background: #EE9543;
+        border-radius: 10px;
+        color: #FFFFFF;
+        display: flex;
+        font-family: 'Signika';
+        font-size: 15px;
+        height: 43px;
+        justify-content: center;
+        line-height: 18px;
+        margin-top: 40px;
+        width: 129px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .block.how-it-works {
+
+        .flex-content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .image-wrapper {
+            max-width: 50.8%;
+            width: 100%;
+        }
+
+        .text-wrapper {
+            max-width: 49.2%;
+            padding: 0 85px;
+            width: 100%;
+        }
+
+        .title {
+            font-size: 45px;
+        }
+
+        .item {
+            margin-top: 50px;
+            padding-left: 60px;
+        }
+
+        .item-number {
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        .item-title {
+            font-size: 25px;
+        }
+
+        .item-desc {
+            font-size: 20px;
+            line-height: 23px;
+        }
+
+        a.see-more {
+            border: 1px solid #EE9543;
+            transition: all 550ms ease-in-out;
+
+            &:hover {
+                background: transparent;
+                color: #EE9543;
+            }
+        }
+    }
+}

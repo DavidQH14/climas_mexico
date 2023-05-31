@@ -1,0 +1,221 @@
+.navigation {
+    background: #313F52;
+    left: 0;
+    max-width: 100%;
+    padding: 12px 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+
+    .holder {
+        margin: 0 auto;
+        max-width: 1260px;
+        width: 100%;
+    }
+
+    .flex-content {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    a.logo {
+        display: block;
+        max-width: 120px;
+        position: relative;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .links-wrapper {
+        background: #313F52;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        left: 0;
+        padding: 0 30px;
+        position: fixed;
+        top: 0;
+        transform: translateX(100%);
+        transition: all 550ms ease-in-out;
+        width: 100vw;
+    }
+
+    a.link {
+        color: #FFFFFF;
+        font-family: 'Signika';
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 21px;
+    }
+
+    a.sublink {
+        color: #FFFFFF;
+        font-family: 'Signika';
+        font-size: 17px;
+        line-height: 21px;
+        padding: 10px 0;
+    }
+
+    a.cta {
+        align-items: center;
+        background: #EE9543;
+        border-radius: 10px;
+        color: #FFFFFF;
+        display: flex;
+        font-family: 'Signika';
+        font-weight: bold;
+        font-size: 15px;
+        height: 43px;
+        justify-content: center;
+        margin-top: 30px;
+        width: 129px;
+    }
+
+    .has-sublist {
+        margin-bottom: 30px;
+        margin-right: 14px;
+    }
+
+    .sublist {
+        padding: 0 25px;
+    }
+
+    .toggle-btn {
+        height: 7px;
+        position: absolute;
+        right: 27px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 550ms ease-in-out;
+        width: 25px;
+        z-index: 1;
+    }
+
+    .bar {
+        background: #D8D8D8;
+        height: 1px;
+        left: 0;
+        position: absolute;
+        transition: all 550ms ease-in-out;
+        width: 100%;
+
+        &:nth-child(1) {
+            top: 0;
+        }
+
+        &:nth-child(2) {
+            top: 100%;
+        }
+    }
+
+    &.expanded {
+
+        .links-wrapper {
+            transform: translateY(0);
+        }
+
+        .toggle-btn {
+            height: 18px;
+            width: 18px;
+        }
+
+        .bar {
+            background: #D8D8D8;
+            left: -3px;
+            width: 25px;
+
+            &:nth-child(1) {
+                top: 50%;
+                transform: rotate(45deg);
+            }
+
+            &:nth-child(2) {
+                top: 50%;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+
+    .navigation {
+
+        a.logo {
+            max-width: 173px;
+        }
+
+        .links-wrapper {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            height: auto;
+            justify-content: inherit;
+            position: relative;
+            transform: none;
+            width: auto;
+        }
+
+        .has-sublist {
+            margin-bottom: unset;
+            padding: 0 108px 0 14px;
+            position: relative;
+    
+            &:after {
+                background: url('../../icons/menu-arrow.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                content: '';
+                height: 5px;
+                position: absolute;
+                right: 88px;
+                top: 8px;
+                width: 10px;
+            }
+
+            .sublist {
+                height: 0;
+            }
+
+            &:hover {
+
+                .sublist {
+                    height: 180px;
+                }
+            }
+        }
+
+        .sublist {
+            background: #313F52;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            left: 0;
+            margin-bottom: unset;
+            max-width: 100%;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            top: calc(100% + 11px);
+            transition: all 550ms ease-in-out;
+            width: 100%;
+        }
+
+        a.sublink {
+            border-top: 1px solid rgba(202, 202, 202, 0.5);
+            padding: 7px 0 7px 14px;
+        }
+
+        a.cta {border: 1px solid #EE9543;
+            margin-left: 30px;
+            margin-top: unset;
+            transition: all 550ms ease-in-out;
+
+            &:hover {
+                background: transparent;
+            }
+        }
+    }
+}

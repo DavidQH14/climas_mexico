@@ -1,0 +1,127 @@
+.types {
+    padding-top: 90px;
+    position: relative;
+
+    .block-title {
+        font-family: 'Signika';
+        font-size: 25px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .text-one, .text-two {
+        font-family: 'RobotoCondensed-Regular';
+        font-size: 18px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+
+    .images-wrapper {
+        display: flex;
+        justify-content: space-around;
+
+        div {
+            max-width: 30%;
+            width: 100%;
+        }
+    }
+
+    .float-image {
+        margin: 0 auto;
+        max-width: 29.9%;
+        width: 100%;
+    }
+
+    .types-two {
+        max-width: 878px;
+        padding-top: 15px;
+        width: 100%;
+    }
+
+    .image-wrapper {
+        padding: 0 15px;
+    }
+
+    .item {
+        margin-top: 35px;
+    }
+
+    .item-name {
+        font-family: 'Roboto-Medium';
+        font-size: 25px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .item-desc {
+        font-family: 'RobotoCondensed-Regular';
+        font-size: 18px;
+        margin-top: 4px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .types {
+
+        .block-title {
+            font-size: 45px;
+        }
+
+        .flex-content {
+            align-items: flex-start;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .text-wrapper {
+            max-width: 54.2%;
+            width: 100%;
+        }
+
+        .text-one, .text-two {
+            font-size: 20px;
+            margin-bottom: 60px;
+            margin-top: 60px;
+        }
+
+        .float-image {
+            margin: unset;
+            max-width: 29.9%;
+        }
+
+        .types-two {
+            padding-top: 25px;
+        }
+    
+        .item {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 45px;
+        }
+
+        .item-name {
+            font-size: 30px;
+            margin-top: unset;
+            text-align: left;
+        }
+
+        .item-desc {
+            font-size: 20px;
+            text-align: left;
+        }
+
+        .image-wrapper {
+            max-width: 25.1%;
+            padding: unset;
+            width: 100%;
+        }
+    
+        .item-wrapper {
+            max-width: 68.3%;
+            width: 100%;
+        }
+    }
+}

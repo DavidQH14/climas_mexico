@@ -1,0 +1,102 @@
+.block.cover {
+    color: #ffffff;
+    font-family: 'Signika';
+    padding: 150px 25px;
+    position: relative;
+
+    .background {
+        background-position: center left !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+
+        &:after {
+            background: #000000;
+            content: '';
+            display: block;
+            height: 100%;
+            left: 0;
+            opacity: 0.6;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+    }
+
+    .text-wrapper {
+        margin: 0 auto;
+        max-width: 414px;
+        position: relative;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .text-one {
+        font-size: 28px;
+    }
+
+    .text-two {
+        font-size: 14px;
+        margin-top: 20px;
+    }
+
+    a.see-more {
+        align-items: center;
+        background: #EE9543;
+        border-radius: 10px;
+        display: flex;
+        font-size: 12px;
+        height: 30px;
+        justify-content: center;
+        margin-top: 30px;
+        width: 80px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .block.cover {
+        padding: 255px 93px 248px;
+
+        .background {
+            background-position: center !important;
+
+            &:after {
+                content: none;
+            }
+        }
+
+        .text-one {
+            font-size: 45px;
+        }
+
+        .text-wrapper {
+            margin: 0 0 0 auto;
+            max-width: 550px;
+        }
+
+        .text-two {
+            font-size: 18px;
+            margin-top: 24px;
+            max-width: 486px;
+            width: 100%;
+        }
+
+        a.see-more {
+            border: 1px solid #EE9543;
+            font-size: 15px;
+            height: 43px;
+            margin-top: 44px;
+            transition: all 550ms ease-in-out;
+            width: 129px;
+
+            &:hover {
+                background: transparent;
+            }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+.how-it-works-steps {
+    padding-top: 131px;
+    position: relative;
+
+    .block-title {
+        font-family: 'Signika';
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .image-wrapper {
+        padding: 0 25px;
+    }
+
+    .item {
+        padding-top: 80px;
+    }
+
+    .item-title {
+        font-family: 'Roboto-Medium';
+        font-size: 24px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .item-desc {
+        font-family: 'RobotoCondensed-Regular';
+        font-size: 18px;
+        margin-top: 10px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .how-it-works-steps {
+
+        .block-title {
+            font-size: 45px;
+        }
+
+        .item {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            max-width: 1005px;
+            padding-top: 40px;
+            width: 100%;
+        }
+
+        .image-wrapper {
+            max-width: 30%;
+            width: 100%;
+        }
+
+        .text-wrapper {
+            max-width: 59.7%;
+            width: 100%;
+        }
+
+        .item-title {
+            font-size: 30px;
+            margin-top: unset;
+            text-align: left;
+        }
+
+        .item-desc {
+            font-size: 20px;
+            text-align: left;
+        }
+    }
+}

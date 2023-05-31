@@ -1,0 +1,41 @@
+.text-effect {
+    opacity: 0;
+	scale: 0.94;
+    transition: all 900ms ease-in-out;
+    transform: translateY(20px);
+
+    &.loaded {
+        opacity: 1;
+        scale: 1;
+        transform: translateY(0);
+    }
+}
+
+.text-inview {
+    opacity: 0;
+    transition: all 750ms ease-in-out;
+    transform: translateY(50%);
+
+    &.viewed {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.image-inview, .image-waiting {
+    overflow: hidden;
+
+    img {
+        opacity: 0;
+        transition: transform 1.2s cubic-bezier(.215,.61,.355,1), opacity 1.2s cubic-bezier(.215,.61,.355,1), border-radius 250ms ease-in-out, max-width 550ms ease-in-out !important;
+        transform: skewY(5deg) scale(1.5) translateY(60px);
+    }
+    
+    &.viewed {
+
+        img {
+            opacity: 1;
+            transform: skewY(0deg) scale(1) translateY(0px);
+        }
+    }
+}

@@ -1,0 +1,194 @@
+.block.products {
+    padding: 10px 25px 130px;
+
+    .holder {
+        margin: 0 auto;
+        max-width: 414px;
+        width: 100%;
+    }
+
+    .category {
+        padding-top: 50px;
+    }
+
+    .category-title {
+        font-family: 'Signika';
+        font-size: 28px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .category-desc {
+        font-family: 'Roboto-Medium';
+        font-size: 14px;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .image-wrapper {
+        overflow: hidden;
+        position: relative;
+
+        &:after {
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%, rgba(0, 0, 0, 0.7) 100%);
+            bottom: 0;
+            content: '';
+            display: block;
+            height: 64px;
+            left: 0;
+            position: absolute;
+            width: 100%;
+        }
+    }
+
+    .product {
+        background: #FFFFFF;
+        border-radius: 15px;
+        margin-top: 30px;
+        position: relative;
+    }
+
+    .product-title {
+        bottom: 20px;
+        color: #ffffff;
+        font-family: 'Signika';
+        font-size: 22px;
+        font-weight: bold;
+        left: 20px;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .product-desc {
+        color: #717171;
+        font-family: 'Roboto-Medium';
+        font-size: 12px;
+        padding: 20px 20px 52px;
+    }
+
+    .see-more {
+        bottom: 20px;
+        color: #766E6E;
+        font-family: 'Signika';
+        font-size: 12px;
+        left: 20px;
+        position: absolute;
+
+        &:after {
+            background: #EE9543;
+            bottom: 0;
+            content: '';
+            display: block;
+            left: 0;
+            height: 1px;
+            position: absolute;
+            width: 100%;
+        }
+    }
+
+    .download {
+        align-items: center;
+        background: #EE9543;
+        border-radius: 10px;
+        color: #FFFFFF;
+        display: flex;
+        font-family: 'Signika';
+        font-weight: 600;
+        font-size: 15px;
+        height: 43px;
+        justify-content: center;
+        line-height: 18px;
+        margin: 0 auto;
+        margin-top: 86px;
+        width: 273px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .block.products {
+        padding: 10px 25px 130px;
+
+        .holder {
+            max-width: 894px;
+        }
+
+        .category {
+            padding-top: 50px;
+        }
+
+        .category-title {
+            font-size: 45px;
+        }
+
+        .category-desc {
+            font-size: 20px;
+            margin: 0 auto;
+            margin-top: 13px;
+            max-width: 535px;
+        }
+
+        .category-content {
+            margin-top: 90px;
+        }
+
+        .flex-content {
+            align-items: stretch;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .product {
+            max-width: 45.6%;
+            width: 100%;
+
+            img {
+                transform: scale(1);
+                transition: all 1550ms ease-in-out;
+            }
+
+            .see-more {
+
+                &:after {
+                    left: 100%;
+                    transition: all 550ms ease-in-out;
+                    width: 0;
+                }
+            }
+
+            &:hover {
+
+                img {
+                    transform: scale(1.1);
+                }
+
+                .see-more {
+
+                    &:after {
+                        left: 0;
+                        transition: width 550ms ease-in-out;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .product-title {
+            font-size: 25px;
+            padding: 15px 20px;
+        }
+
+        .product-desc, .see-more {
+            font-size: 15px;
+        }
+
+        .download {
+            border: 1px solid #EE9543;
+            transition: all 550ms ease-in-out;
+
+            &:hover {
+                background: transparent;
+                color: #EE9543;
+            }
+        }
+    }
+}

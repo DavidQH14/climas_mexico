@@ -1,0 +1,105 @@
+.block.faqs {
+    font-family: 'Signika';
+    padding: 100px 25px;
+    position: relative;
+
+    .holder {
+        margin: 0 auto;
+        max-width: 480px;
+        width: 100%;
+    }
+
+    .title {
+        color: #222222;
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    .item {
+        background: #FFFFFF;
+        border-radius: 10px;
+        margin-top: 30px;
+        padding-right: 60px;
+        position: relative;
+
+        &:after {
+            background: url('../../icons/faqs-arrow.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            content: '';
+            display: block;
+            height: 6px;
+            pointer-events: none;
+            position: absolute;
+            right: 43px;
+            top: 37px;
+            transition: all 550ms ease-in-out;
+            width: 12px;
+        }
+
+        &.expanded {
+
+            &:after {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+
+    .item-header {
+        cursor: pointer;
+        padding: 28px 25px;
+    }
+
+    .question {
+        font-size: 18px;
+        pointer-events: none;
+    }
+
+    .item-content {
+        height: 0;
+        overflow: hidden;
+        transition: all 550ms ease-in-out;
+    }
+
+    .answer {
+        font-size: 16px;
+        padding: 20px 35px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .block.faqs {
+        padding: 190px 25px 200px;
+
+        .holder {
+            max-width: 1262px;
+        }
+
+        .title {
+            font-size: 45px;
+            line-height: 55px;
+        }
+
+        .content {
+            align-items: flex-start;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .item {
+            max-width: 48%;
+            width: 100%;
+        }
+
+        .question {
+            font-size: 20px;
+        }
+    
+        .answer {
+            font-size: 16px;
+        }
+    }
+}
