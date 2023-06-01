@@ -1,4 +1,5 @@
 .block.contact {
+    padding-top: 100px;
     position: relative;
 
     .text-wrapper {
@@ -111,6 +112,7 @@
 @media (min-width: 768px) {
 
     .block.contact {
+        padding-top: 200px;
 
         .flex-content {
             display: flex;

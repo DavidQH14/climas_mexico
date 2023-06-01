@@ -1,6 +1,6 @@
 .block.faqs {
     font-family: 'Signika';
-    padding: 100px 25px;
+    padding: 100px 25px 0;
     position: relative;
 
     .holder {
@@ -71,7 +71,7 @@
 @media (min-width: 768px) {
 
     .block.faqs {
-        padding: 190px 25px 200px;
+        padding: 190px 25px 0;
 
         .holder {
             max-width: 1262px;
