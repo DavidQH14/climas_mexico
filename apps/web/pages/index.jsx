@@ -52,7 +52,7 @@ const Index = ({ page_settings, page_content, extra_info }) => {
 
     const { content } = page_content;
 
-    const { pathname } = useRouter();
+    const { pathname, asPath } = useRouter();
 
     const setInview = (event) => {
 
@@ -80,6 +80,12 @@ const Index = ({ page_settings, page_content, extra_info }) => {
 
     useEffect(() => {
         window.addEventListener('scroll', setInview)
+
+        if (asPath !== '/') {
+            let ContactSection = document.querySelector('.block.contact');
+
+            ContactSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
     })
 
     return (
