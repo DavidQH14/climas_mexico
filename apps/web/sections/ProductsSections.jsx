@@ -95,7 +95,7 @@ const ProductsSections = ({products}) => {
                                 null
                     }
                     <Benefits benefits={singleProduct.all_benefits} />
-                    <a href="/#contacto" className="see-more text-inview">Contáctanos</a>
+                    <a href="/?contacto" className="see-more text-inview">Contáctanos</a>
                 </div>
             </div>
         </section>

@@ -81,11 +81,13 @@ const Index = ({ page_settings, page_content, extra_info }) => {
     useEffect(() => {
         window.addEventListener('scroll', setInview)
 
-        if (asPath !== '/') {
-            let ContactSection = document.querySelector('.block.contact');
-
-            ContactSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
-        }
+        setTimeout(() => {
+            if (asPath !== '/') {
+                let ContactSection = document.querySelector('.block.contact');
+                
+                ContactSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            }
+        }, 750);
     })
 
     return (
